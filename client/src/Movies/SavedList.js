@@ -7,7 +7,7 @@ function SavedList({ list }) {
       <h3>Saved Movies:</h3>
       {list.map(movie => {
         return (
-          <NavLink
+          <NavLink style={{color:'black', textDecoration:'none'}}
             to={`/movies/${movie.id}`}
             key={movie.id}
             activeClassName="saved-active"
@@ -17,8 +17,9 @@ function SavedList({ list }) {
         );
       })}
       <div className="home-button">
-        <Link to="/">Home</Link>
+        <Link style={{color:'black',textDecoration:'none'}} to="/">Home</Link>
       </div>
+      <div><Link style={{color:'black',textDecoration:'none'}} to='/add-movie'>Add Movie</Link></div>
     </div>
   );
 }
